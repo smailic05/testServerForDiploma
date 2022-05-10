@@ -29,7 +29,7 @@ func Index(w http.ResponseWriter, r *http.Request) {
 func main() {
 	http.HandleFunc("/", Index)
 	fmt.Print("listen on 8080")
-	err := http.ListenAndServe("localhost:8000", nil)
+	err := http.ListenAndServe(":8000", nil)
 	fmt.Print("listen on 8080")
 	if err != nil {
 		fmt.Println(err)
